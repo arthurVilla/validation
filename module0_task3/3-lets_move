@@ -1,0 +1,11 @@
+#!/bin/bash
+
+ls | grep '\<[[:upper:]]' > salida.txt
+echo "salida generado"
+while IFS= read -r line
+do
+  echo "$line"
+  mv  -f $line /tmp/u
+done < salida.txt
+
+
